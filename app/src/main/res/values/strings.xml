@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EBC</string>
+    <string name="t1">1</string>
+    <string name="t2">2</string>
+    <string name="t3">3</string>
+    <string name="t4">4</string>
+    <string name="t5">5</string>
+    <string name="t6">6</string>
+    <string name="t7">7</string>
+    <string name="t8">8</string>
+    <string name="t9">9</string>
+    <string name="t_clear">CLEAR</string>
+    <string name="t0">0</string>
+    <string name="t_del">DELETE</string>
+    <string name="results">Results</string>
+    <string name="units">Meters</string>
+    <string name="unitsValue">0 Units</string>
+    <string name="resultsValue">0 MMK</string>
+    <string name="developed_by">developed by</string>
+    <string name="developer_name">Hlayan Htet Aung</string>
+    <string name="electric_fee">Electric Fee</string>
+    <string name="setting">Settings</string>
+    <string name="click_on_texts_to_change_values">Click on texts to change values</string>
+    <string name="reset">RESET</string>
+    <string name="mmk">MMK</string>
+</resources>

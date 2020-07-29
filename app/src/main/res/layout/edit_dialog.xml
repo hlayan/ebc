@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/result_view"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3" />
+
+    <TableLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TableRow
+            style="@style/RowStyleForButton"
+            >
+
+            <Button
+                android:id="@+id/onClickB1"
+                android:text="@string/t1"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB2"
+                android:text="@string/t2"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB3"
+                android:text="@string/t3"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/RowStyleForButton"
+            >
+
+            <Button
+                android:id="@+id/onClickB4"
+                android:text="@string/t4"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB5"
+                android:text="@string/t5"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB6"
+                android:text="@string/t6"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/RowStyleForButton"
+            >
+
+            <Button
+                android:id="@+id/onClickB7"
+                android:text="@string/t7"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB8"
+                android:text="@string/t8"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB9"
+                android:text="@string/t9"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/RowStyleForButton"
+            >
+
+            <Button
+                android:id="@+id/onClickClear"
+                android:text="@string/reset"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/ripple_effect_for_positive"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickB0"
+                android:text="@string/t0"
+                android:background="@drawable/ripple_effect_for_negative"
+                style="@style/buttonStyleOnRow"
+                />
+
+            <Button
+                android:id="@+id/onClickDelete"
+                android:text="@string/t_del"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/ripple_effect_for_positive"                style="@style/buttonStyleOnRow"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
