@@ -14,20 +14,22 @@
         android:background="#d3d3d3" />
 
     <LinearLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_weight="1.5"
         >
 
         <include android:id="@+id/units"
             layout="@layout/result_view"/>
 
         <View
+            android:layout_marginVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginHorizontal="10dp"
             android:background="#d3d3d3" />
 
         <include android:id="@+id/results"
