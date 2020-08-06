@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    TextView unitsValues,resultsValue;
+    TextView unitsValues, resultsValue;
     String inputUnits;
     private static final int LIMIT = 10;
 
@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),SettingActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
                 startActivity(intent);
             }
         });
@@ -73,19 +73,17 @@ public class MainActivity extends Activity {
         developer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try
-                {
+                try {
                     PackageManager packageManager = getPackageManager();
                     ApplicationInfo appInfo = packageManager.getApplicationInfo("com.facebook.katana", 0);
-                    if (appInfo.enabled)
-                    { Intent i1 = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/100016026428007"));
+                    if (appInfo.enabled) {
+                        Intent i1 = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/100016026428007"));
                         startActivity(i1);
-                    } else  {
+                    } else {
                         Intent i2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/HlayanHtetAung"));
                         startActivity(i2);
                     }
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/HlayanHtetAung"));
                     startActivity(i3);
                 }
@@ -101,61 +99,61 @@ public class MainActivity extends Activity {
     }
 
     public void onClickB1(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("1");
         }
     }
 
     public void onClickB2(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("2");
         }
     }
 
     public void onClickB3(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("3");
         }
     }
 
     public void onClickB4(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("4");
         }
     }
 
     public void onClickB5(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("5");
         }
     }
 
     public void onClickB6(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("6");
         }
     }
 
     public void onClickB7(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("7");
         }
     }
 
     public void onClickB8(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("8");
         }
     }
 
     public void onClickB9(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("9");
         }
     }
 
     public void onClickB0(View view) {
-        if (inputUnits.length()<=LIMIT){
+        if (inputUnits.length() <= LIMIT) {
             input("0");
         }
     }
@@ -170,8 +168,8 @@ public class MainActivity extends Activity {
         removeLastChar(inputUnits);
     }
 
-    void input(String s){
-        if (inputUnits.equals("0")){
+    void input(String s) {
+        if (inputUnits.equals("0")) {
             inputUnits = "";
         }
         inputUnits += s;
@@ -188,16 +186,16 @@ public class MainActivity extends Activity {
 
     void removeLastChar(String str) {
 
-        if (!str.isEmpty()){
+        if (!str.isEmpty()) {
             inputUnits = str.substring(0, str.length() - 1);
         }
 
-        if (inputUnits.isEmpty()){
+        if (inputUnits.isEmpty()) {
             unitsValues.setText(R.string.unitsValue);
             resultsValue.setText(R.string.resultsValue);
             resultsValue.setTextSize(18);
             unitsValues.setTextSize(18);
-        }else {
+        } else {
 
             String result = inputUnits + " Units";
             unitsValues.setText(result);

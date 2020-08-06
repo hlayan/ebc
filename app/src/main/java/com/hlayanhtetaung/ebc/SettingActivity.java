@@ -19,8 +19,8 @@ public class SettingActivity extends Activity {
     View fee_view, mmk_125;
 
     TextView value_35, value_50, value_70, value_90, value_110, value_120, value_125,
-    kyat_35, kyat_50, kyat_70, kyat_90, kyat_110, kyat_120, kyat_125, fee_title, fee_value,
-    title, value;
+            kyat_35, kyat_50, kyat_70, kyat_90, kyat_110, kyat_120, kyat_125, fee_title, fee_value,
+            title, value;
 
     private static long UNIT30, UNIT50, UNIT75, UNIT100, UNIT150, UNIT200;
 
@@ -83,30 +83,30 @@ public class SettingActivity extends Activity {
     protected void onStart() {
         super.onStart();
 
-        UNIT30 = sharedPref.getLong("UNIT30",30);
-        UNIT50 = sharedPref.getLong("UNIT50",50);
-        UNIT75 = sharedPref.getLong("UNIT75",75);
-        UNIT100 = sharedPref.getLong("UNIT100",100);
-        UNIT150 = sharedPref.getLong("UNIT150",150);
-        UNIT200 = sharedPref.getLong("UNIT200",200);
+        UNIT30 = sharedPref.getLong("UNIT30", 30);
+        UNIT50 = sharedPref.getLong("UNIT50", 50);
+        UNIT75 = sharedPref.getLong("UNIT75", 75);
+        UNIT100 = sharedPref.getLong("UNIT100", 100);
+        UNIT150 = sharedPref.getLong("UNIT150", 150);
+        UNIT200 = sharedPref.getLong("UNIT200", 200);
 
-        FEE = sharedPref.getLong("FEE",500);
+        FEE = sharedPref.getLong("FEE", 500);
 
-        RATE35 = sharedPref.getLong("RATE35",35);
-        RATE50 = sharedPref.getLong("RATE50",50);
-        RATE70 = sharedPref.getLong("RATE70",70);
-        RATE90 = sharedPref.getLong("RATE90",90);
-        RATE110 = sharedPref.getLong("RATE110",110);
-        RATE120 = sharedPref.getLong("RATE120",120);
-        RATE125 = sharedPref.getLong("RATE125",125);
+        RATE35 = sharedPref.getLong("RATE35", 35);
+        RATE50 = sharedPref.getLong("RATE50", 50);
+        RATE70 = sharedPref.getLong("RATE70", 70);
+        RATE90 = sharedPref.getLong("RATE90", 90);
+        RATE110 = sharedPref.getLong("RATE110", 110);
+        RATE120 = sharedPref.getLong("RATE120", 120);
+        RATE125 = sharedPref.getLong("RATE125", 125);
 
         s_35 = "1 - " + UNIT30 + " Units";
-        s_50 = (UNIT30+1) + " - " + UNIT50 + " Units";
-        s_70 = (UNIT50+1) + " - " + UNIT75 + " Units";
-        s_90 = (UNIT75+1) + " - " + UNIT100 + " Units";
-        s_110 = (UNIT100+1) + " - " + UNIT150 + " Units";
-        s_120 = (UNIT150+1) + " - " + UNIT200 + " Units";
-        s_125 = "Above " + (UNIT200+1) + " Units";
+        s_50 = (UNIT30 + 1) + " - " + UNIT50 + " Units";
+        s_70 = (UNIT50 + 1) + " - " + UNIT75 + " Units";
+        s_90 = (UNIT75 + 1) + " - " + UNIT100 + " Units";
+        s_110 = (UNIT100 + 1) + " - " + UNIT150 + " Units";
+        s_120 = (UNIT150 + 1) + " - " + UNIT200 + " Units";
+        s_125 = "Above " + (UNIT200 + 1) + " Units";
 
         m_35 = RATE35 + " MMK";
         m_50 = RATE50 + " MMK";
@@ -140,104 +140,104 @@ public class SettingActivity extends Activity {
         value_35.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog("1 to ",UNIT30,"UNIT30");
+                showEditDialog("1 to ", UNIT30, "UNIT30");
             }
         });
 
         value_50.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog((UNIT30+1) + " to ",UNIT50,"UNIT50");
+                showEditDialog((UNIT30 + 1) + " to ", UNIT50, "UNIT50");
             }
         });
 
         value_70.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog((UNIT50+1) + " to ",UNIT75,"UNIT75");
+                showEditDialog((UNIT50 + 1) + " to ", UNIT75, "UNIT75");
             }
         });
 
         value_90.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog((UNIT75+1) + " to ",UNIT100,"UNIT100");
+                showEditDialog((UNIT75 + 1) + " to ", UNIT100, "UNIT100");
             }
         });
 
         value_110.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog((UNIT100+1) + " to ",UNIT150,"UNIT150");
+                showEditDialog((UNIT100 + 1) + " to ", UNIT150, "UNIT150");
             }
         });
 
         value_120.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog((UNIT150+1) + " to ",UNIT200,"UNIT200");
+                showEditDialog((UNIT150 + 1) + " to ", UNIT200, "UNIT200");
             }
         });
 
         fee_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(" Electric Fee ",FEE,"FEE");
+                showEditDialog(" Electric Fee ", FEE, "FEE");
             }
         });
 
         kyat_35.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_35,RATE35,"RATE35");
+                showEditDialog(s_35, RATE35, "RATE35");
             }
         });
 
         kyat_50.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_50,RATE50,"RATE50");
+                showEditDialog(s_50, RATE50, "RATE50");
             }
         });
 
         kyat_70.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_70,RATE70,"RATE70");
+                showEditDialog(s_70, RATE70, "RATE70");
             }
         });
 
         kyat_90.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_90,RATE90,"RATE90");
+                showEditDialog(s_90, RATE90, "RATE90");
             }
         });
 
         kyat_110.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_110,RATE110,"RATE110");
+                showEditDialog(s_110, RATE110, "RATE110");
             }
         });
 
         kyat_120.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_120,RATE120,"RATE120");
+                showEditDialog(s_120, RATE120, "RATE120");
             }
         });
 
         mmk_125.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showEditDialog(s_125,RATE125,"RATE125");
+                showEditDialog(s_125, RATE125, "RATE125");
             }
         });
 
     }
 
-    void showEditDialog(String titleString, final long valueLong, final String saveValue){
+    void showEditDialog(String titleString, final long valueLong, final String saveValue) {
         LayoutInflater inflater = LayoutInflater.from(this);
         View dialogView = inflater.inflate(R.layout.edit_dialog, null);
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -267,7 +267,7 @@ public class SettingActivity extends Activity {
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("0");
                 }
             }
@@ -276,7 +276,7 @@ public class SettingActivity extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("1");
                 }
             }
@@ -285,7 +285,7 @@ public class SettingActivity extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("2");
                 }
             }
@@ -294,7 +294,7 @@ public class SettingActivity extends Activity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("3");
                 }
             }
@@ -303,7 +303,7 @@ public class SettingActivity extends Activity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("4");
                 }
             }
@@ -312,7 +312,7 @@ public class SettingActivity extends Activity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("5");
                 }
             }
@@ -321,7 +321,7 @@ public class SettingActivity extends Activity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("6");
                 }
             }
@@ -330,7 +330,7 @@ public class SettingActivity extends Activity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("7");
                 }
             }
@@ -339,7 +339,7 @@ public class SettingActivity extends Activity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("8");
                 }
             }
@@ -348,7 +348,7 @@ public class SettingActivity extends Activity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputUnits.length()<=LIMIT){
+                if (inputUnits.length() <= LIMIT) {
                     input("9");
                 }
             }
@@ -377,7 +377,7 @@ public class SettingActivity extends Activity {
                 long value = Long.parseLong(inputUnits);
 
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putLong(saveValue,value);
+                editor.putLong(saveValue, value);
                 editor.apply();
 
                 dialog.dismiss();
@@ -395,8 +395,8 @@ public class SettingActivity extends Activity {
         alertDialog.create().show();
     }
 
-    void input(String s){
-        if (inputUnits.equals("0")){
+    void input(String s) {
+        if (inputUnits.equals("0")) {
             inputUnits = "";
         }
         inputUnits += s;
@@ -408,14 +408,14 @@ public class SettingActivity extends Activity {
 
     void removeLastChar(String str) {
 
-        if (!str.isEmpty()){
+        if (!str.isEmpty()) {
             inputUnits = str.substring(0, str.length() - 1);
         }
 
-        if (inputUnits.isEmpty()){
+        if (inputUnits.isEmpty()) {
             value.setText(R.string.t0);
             value.setTextSize(18);
-        }else {
+        } else {
             value.setTextSize(18);
             value.setText(inputUnits);
         }
