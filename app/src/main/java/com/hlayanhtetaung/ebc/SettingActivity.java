@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,11 +45,37 @@ public class SettingActivity extends Activity {
 
         sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE);
 
+        TextView app_bar_title = findViewById(R.id.app_bar_title);
+        app_bar_title.setText(R.string.setting);
+
         ImageView closeApp = findViewById(R.id.close_app);
+        closeApp.setImageResource(R.drawable.ic_baseline_close_24);
         closeApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        ImageView profile = findViewById(R.id.edit);
+        profile.setImageResource(R.drawable.ic_baseline_account_circle_24);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    PackageManager packageManager = getPackageManager();
+                    ApplicationInfo appInfo = packageManager.getApplicationInfo("com.facebook.katana", 0);
+                    if (appInfo.enabled) {
+                        Intent i1 = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/100016026428007"));
+                        startActivity(i1);
+                    } else {
+                        Intent i2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/HlayanHtetAung"));
+                        startActivity(i2);
+                    }
+                } catch (Exception e) {
+                    Intent i3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/HlayanHtetAung"));
+                    startActivity(i3);
+                }
             }
         });
 

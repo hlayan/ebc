@@ -4,21 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingVertical="10dp"
     tools:context=".MainActivity">
 
     <include layout="@layout/title_bar" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d3d3d3" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -26,22 +20,11 @@
             android:id="@+id/units"
             layout="@layout/result_view" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginVertical="10dp"
-            android:background="#d3d3d3" />
-
         <include
             android:id="@+id/results"
             layout="@layout/result_view" />
 
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d3d3d3" />
 
     <TableLayout
         android:layout_width="match_parent"
