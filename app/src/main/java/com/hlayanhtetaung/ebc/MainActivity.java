@@ -184,10 +184,10 @@ public class MainActivity extends Activity {
         resultsValue.setTextSize(18);
     }
 
-    void removeLastChar(String str) {
+    void removeLastChar(String string) {
 
-        if (!str.isEmpty()) {
-            inputUnits = str.substring(0, str.length() - 1);
+        if (!string.isEmpty()) {
+            inputUnits = string.substring(0, string.length() - 1);
         }
 
         if (inputUnits.isEmpty()) {
