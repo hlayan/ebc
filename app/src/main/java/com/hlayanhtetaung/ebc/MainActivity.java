@@ -1,19 +1,14 @@
 package com.hlayanhtetaung.ebc;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,7 +36,7 @@ public class MainActivity extends Activity {
         View results = findViewById(R.id.results);
 
         TextView resultsTitle = results.findViewById(R.id.resultsTitle);
-        resultsTitle.setText(R.string.results);
+        resultsTitle.setText(R.string.mmk);
         resultsTitle.setTextSize(18);
 
         TextView unitTitle = units.findViewById(R.id.resultsTitle);
@@ -160,8 +155,8 @@ public class MainActivity extends Activity {
 
     public void onClickBClear(View view) {
         inputUnits = "";
-        unitsValues.setText(R.string.unitsValue);
-        resultsValue.setText(R.string.resultsValue);
+        unitsValues.setText(R.string.defaultValue);
+        resultsValue.setText(R.string.defaultValue);
     }
 
     public void onClickBDelete(View view) {
@@ -174,12 +169,12 @@ public class MainActivity extends Activity {
         }
         inputUnits += s;
 
-        String resultUnit = inputUnits + " Units";
+        String resultUnit = inputUnits + "";
         unitsValues.setText(resultUnit);
         unitsValues.setTextSize(18);
 
         long value = Long.parseLong(inputUnits);
-        resultUnit = calculateMeterBill.calculate(value) + " MMK";
+        resultUnit = calculateMeterBill.calculate(value) + "";
         resultsValue.setText(resultUnit);
         resultsValue.setTextSize(18);
     }
@@ -191,18 +186,18 @@ public class MainActivity extends Activity {
         }
 
         if (inputUnits.isEmpty()) {
-            unitsValues.setText(R.string.unitsValue);
-            resultsValue.setText(R.string.resultsValue);
+            unitsValues.setText(R.string.defaultValue);
+            resultsValue.setText(R.string.defaultValue);
             resultsValue.setTextSize(18);
             unitsValues.setTextSize(18);
         } else {
 
-            String result = inputUnits + " Units";
+            String result = inputUnits + "";
             unitsValues.setText(result);
             unitsValues.setTextSize(18);
             long value = Long.parseLong(inputUnits);
 
-            result = calculateMeterBill.calculate(value) + " MMK";
+            result = calculateMeterBill.calculate(value) + "";
             resultsValue.setText(result);
             resultsValue.setTextSize(18);
         }
