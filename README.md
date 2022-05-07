@@ -10,9 +10,9 @@ Setting has unique features that you can change every units and costs for units 
 
 <table align="center">
    <tr>
-      <td><img src="https://github.com/hlayan/EBC/blob/main/screenshots/1.png"></td>
-      <td><img src="https://github.com/hlayan/EBC/blob/main/screenshots/2.png"></td>
-      <td><img src="https://github.com/hlayan/EBC/blob/main/screenshots/3.png"></td>
+      <td><img src="https://github.com/hlayan/ebc/blob/main/screenshots/1.png"></td>
+      <td><img src="https://github.com/hlayan/ebc/blob/main/screenshots/2.png"></td>
+      <td><img src="https://github.com/hlayan/ebc/blob/main/screenshots/3.png"></td>
    </tr>
 </table>
 
