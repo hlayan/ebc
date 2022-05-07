@@ -1,28 +1,24 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 32
 
     defaultConfig {
         applicationId "com.hlayanhtetaung.ebc"
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionName "1.0.0"
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+        }
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
 }
