@@ -1,6 +1,6 @@
 # EBC
 
-Electirc Bill Calculator (Myanmar EBC) is a simple and lightweight app.
+Electric Bill Calculator (Myanmar EBC) is a simple and lightweight app.
 
 Unlike other! my app is very easy to use that is you can input numbers and see the results as live.
 
